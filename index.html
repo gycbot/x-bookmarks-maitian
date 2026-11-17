@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0f0e">
+  <meta name="description" content="9 条 X 收藏的公开分析：主张、可学方法、许可证核实、夸大校正、真实状态，以及麦田工作台的信息架构演示。只读公开展示，不含私有数据。">
+  <title>9 条 X 收藏 · 能用的判断与核实的夸大</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="回到顶部">
+      <span class="brand-mark" aria-hidden="true">麦</span>
+      <span class="brand-text">书签拆解 <em>BOOKMARKS</em></span>
+    </a>
+    <nav class="nav" aria-label="页面导航">
+      <a href="#analysis">九条分析</a>
+      <a href="#maitian">麦田演示</a>
+      <a href="#notes">阅读说明</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">X BOOKMARKS · OBSERVED 2026-11-17 · ASIA/SHANGHAI</p>
+      <h1>9 条收藏，<br><span>拆成能用的判断。</span></h1>
+      <p class="lead">不只收藏链接。逐条拆主张、可学方法、许可证与夸大，并保留真实状态：哪些已接入，哪些长文仍没读到。</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#analysis">读 9 条分析</a>
+        <a class="btn btn-ghost" href="#maitian">看麦田演示</a>
+      </div>
+
+      <dl class="stat-grid" id="statGrid">
+        <div><dt>收藏</dt><dd data-stat="total">9</dd><small>本批</small></div>
+        <div><dt>已分析</dt><dd data-stat="analyzed">9</dd><small>帖级</small></div>
+        <div><dt>已接入</dt><dd data-stat="integrated">1</dd><small>只读工作台</small></div>
+        <div><dt>待补</dt><dd data-stat="pending">5</dd><small>不写成已完成</small></div>
+        <div><dt>长文未读</dt><dd data-stat="unreadArticles">4</dd><small>正文为空壳</small></div>
+      </dl>
+
+      <div class="hero-note">
+        <span class="dot"></span>
+        只读公开展示。无登录、无发布、无实时私有数据，也不含任何口令或密钥。
+      </div>
+    </section>
+
+    <section class="section" id="analysis">
+      <div class="section-head">
+        <div>
+          <p class="kicker">01 / ANALYSIS</p>
+          <h2>九条收藏，逐条拆开</h2>
+          <p class="section-desc">每条保留原帖链接与观测数据。状态分三档：<b>已分析</b>、<b>已接入</b>、<b>待补</b>；未读全文就明确标出，不补写。</p>
+        </div>
+        <div class="count" aria-live="polite"><strong id="visibleCount">9</strong><span>/ 9 显示</span></div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <span class="sr-only">搜索收藏</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input id="searchInput" type="search" placeholder="搜作者、标题、方法、风险…" autocomplete="off">
+        </label>
+        <div class="filters" role="group" aria-label="筛选">
+          <button class="chip is-active" data-filter="all" type="button">全部</button>
+          <button class="chip" data-filter="integrated" type="button">已接入</button>
+          <button class="chip" data-filter="pending" type="button">待补</button>
+          <button class="chip" data-filter="hold" type="button">HOLD</button>
+        </div>
+      </div>
+
+      <div class="cards" id="cards"></div>
+      <p class="empty" id="emptyState" hidden>没有匹配的收藏。换个关键词，或点「全部」。</p>
+    </section>
+
+    <section class="section" id="maitian">
+      <div class="section-head">
+        <div>
+          <p class="kicker">02 / MAITIAN WORKBENCH</p>
+          <h2>麦田工作台 · 可查看演示</h2>
+          <p class="section-desc">按麦田的信息架构做的只读演示：灵感 → 内容 → 排期 → 复盘 → 规程。这里只展示结构与示例，不查询任何私有产线。</p>
+        </div>
+        <span class="demo-badge">演示数据</span>
+      </div>
+
+      <div class="notice" role="note">
+        <strong>边界</strong>
+        本区是信息架构演示，不连接私有队列、回执、账号后台或实时运营数据；示例行均标为 SAMPLE。
+      </div>
+
+      <div class="maitian-grid">
+        <div class="panel panel-wide">
+          <div class="panel-head"><h3>五模块闭环</h3><span>IA</span></div>
+          <ol class="modules" id="modules"></ol>
+        </div>
+
+        <div class="panel panel-wide">
+          <div class="panel-head"><h3>三层分工</h3><span>FLOW</span></div>
+          <div class="flow" id="flow"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>七平台发布方式</h3><span>PLATFORMS</span></div>
+          <div class="platforms" id="platforms"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>状态机</h3><span>STATES</span></div>
+          <div class="states" id="states"></div>
+          <p class="panel-note">国内四家停在 awaiting_user，等人点最后一下；海外平台可回读文案与定时后自动提交。</p>
+        </div>
+
+        <div class="panel panel-wide">
+          <div class="panel-head"><h3>示例排期</h3><span>SAMPLE ROWS</span></div>
+          <div class="table-wrap">
+            <table class="sample-table">
+              <thead><tr><th>期号</th><th>示例标题</th><th>平台</th><th>状态</th><th>说明</th></tr></thead>
+              <tbody id="sampleRows"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel panel-wide">
+          <div class="panel-head"><h3>本批公开帖收藏数</h3><span>PUBLIC DATA</span></div>
+          <div class="bars" id="bars"></div>
+          <p class="panel-note">公开帖收藏数，不是我们账号的运营数据；观测于 2026-11-17，之后可能变化。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section notes" id="notes">
+      <div class="section-head">
+        <div>
+          <p class="kicker">03 / READ &amp; BOUNDARIES</p>
+          <h2>阅读说明与边界</h2>
+        </div>
+      </div>
+      <div class="notes-grid">
+        <article>
+          <h3>数字口径</h3>
+          <p>收藏、曝光、赞、转发、引用、回复均取自公开帖当时的可见数据；GitHub stars / forks 取自公开 API。换算与比较只在本页标注范围内成立。</p>
+        </article>
+        <article>
+          <h3>真实状态</h3>
+          <p>9 条全部完成帖级分析；1 条已接入只读工作台；4 条长文正文为空壳，计为长文未读；5 条仍有待补项。未把未读全文改写为已读。</p>
+        </article>
+        <article>
+          <h3>不公开的东西</h3>
+          <p>原始书签 JSON、私有队列与回执、账号运营数据、访问口令、密钥、cookie、本机路径，均不在本站。未接入任何发布模块。</p>
+        </article>
+        <article>
+          <h3>来源与声明</h3>
+          <p>来源为 X 公开帖与 GitHub 公开仓库/API。本站为 AI 技术整理与公开内容核对，非原作者官方页面；不构成投资建议，也不代表原作者立场。</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <span class="brand-mark small" aria-hidden="true">麦</span>
+      <p>只读展示 · 2026-11-17 · Asia/Shanghai</p>
+    </div>
+    <p class="footer-note">AI 技术整理，素材来自公开内容。页面无外部脚本、无追踪、无登录。</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
